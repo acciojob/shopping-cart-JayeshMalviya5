@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping-cart</title>
-    <!-- <link rel="stylesheet" href="Style.css">
-     -->
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shoping List</title>
+	<link rel="stylesheet" href="./css/list.css">
+<script src="./js/list.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="cart">
-            <div class="input">
-                <div><input id="item-name-input"  type="text" placeholder="Name" /></div>
-                <br />
-                <div><input id="item-price-input " type="number" placeholder="Price" /></div>
-                <br />
-            </div>
-            <div class="btn">
-                <button id="add">Add</button>
-            </div>
-            <br />
-            <div class="data">
-                <table id="table" style="width: 30%">
-                    <thead>
-                        <tr>
-                            <th id="item">Item</th>
-                            <th id="price">Price</th>
-                        </tr>
-                    </thead>
-
-                </table>
-            </div>
-        </div>
-        <h3 id="total"></h3>
-    </div>
-
-    <script src="Index.js"></script>
+	<header id="heading">
+		Shopping List Calculator
+	</header>
+	<main onload="render()">
+		<table id="table1">
+			<caption></caption>
+			<tr>
+				<th>Item Name</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Total</th> 
+			</tr>
+			<tr>
+        <form id="myinputs">
+          <td><input type="text" id="item-name-input" placeholder="Name"></td>
+          <td><input type="text" id="item-qty-input" placeholder="Qty"></td>
+          <td><input type="text" id="item-price-input" placeholder="Price"></td>
+        </form>
+        <td><button id="add" onclick="addData();">Add</button></td>
+      </tr>
+    </table>
+    <div id="total">Total Ammount is 0 $</div>
+  </main>
+	<footer></footer>
 </body>
 
 </html>
