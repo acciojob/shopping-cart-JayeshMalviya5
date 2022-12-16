@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping-cart</title>
+    <!-- <link rel="stylesheet" href="Style.css">
+     -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="container">
+        <div class="cart">
+            <div class="input">
+                <div><input id="item-name-input"  type="text" placeholder="Name" /></div>
+                <br />
+                <div><input id="item-price-input " type="number" placeholder="Price" /></div>
+                <br />
+            </div>
+            <div class="btn">
+                <button id="add">Add</button>
+            </div>
+            <br />
+            <div class="data">
+                <table id="table" style="width: 30%">
+                    <thead>
+                        <tr>
+                            <th id="item">Item</th>
+                            <th id="price">Price</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <h3 id="total"></h3>
+    </div>
 
+    <script src="Index.js"></script>
 </body>
 
 </html>
